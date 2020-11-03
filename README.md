@@ -8,30 +8,30 @@ Compiled with CMAKE on Windows
 ## Valid Operations
 Constants: pi
 Arithmetic Operations:
-> Add: +
-> Subtract: -
-> Multiply: *
-> Division: /
+> Add: +, 
+> Subtract: -, 
+> Multiply: *, 
+> Division: /, 
 
 Logical Operations:
-> not
-> and
-> or
-> '<'
-> '>'
-> '<='
-> '>='
-> '='
-> 'if'
+> not,
+> and,
+> or, 
+> '<', 
+> '>', 
+> '<=', 
+> '>=', 
+> '=', 
+> 'if', 
 
 Other Functions:
-> Log Base Ten: Log10
-> pow
-> sin
-> cos
-> arctan
+> Log10, 
+> pow, 
+> sin, 
+> cos, 
+> arctan, 
 
 GUI Functions:
-> point
-> line
-> arc
+> point, 
+> line, 
+> arc, 
