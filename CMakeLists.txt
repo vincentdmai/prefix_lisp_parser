@@ -39,7 +39,7 @@ set(test_src
   catch.hpp
   unittests.cpp
   test_interpreter.cpp
-  test_tokenize.cpp test_types.cpp #remove before release
+  test_tokenize.cpp test_types.cpp
 )
 
 # EDIT

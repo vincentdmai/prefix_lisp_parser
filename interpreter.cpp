@@ -8,9 +8,6 @@
 
 
 bool Interpreter::parse(std::istream & expression) noexcept {
-	// TODO: implement this function
-	// return true if input is valid. otherwise, return false.
-	  // call the tokenize method in tokenize.hpp in order to obtain the istream parameter to obtain parsed tokens.
 	TokenSequenceType tokenHolder = tokenize(expression);
 	//-------------Checking if the expression is balanced-----------------------------------------------------
 	if (!checkBalance(tokenHolder)) //call checkBalance function
@@ -35,9 +32,7 @@ bool Interpreter::parse(std::istream & expression) noexcept {
 
 Expression Interpreter::eval()
 {
-	// TODO: implement this function
-
-	  //if try/catch not implemented then ast will not be reset when error is thrown, which would cause weird mess in REPL mode.
+	//if try/catch not implemented then ast will not be reset when error is thrown, which would cause weird mess in REPL mode.
 	try
 	{
 		Expression result = ast.evaluate(envir, graphics);

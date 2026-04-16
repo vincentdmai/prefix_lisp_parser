@@ -12,7 +12,6 @@
 
 //Point constructor
 Expression::Expression(std::tuple<double, double> value) {
-	// TODO: implement this function
 	head.type = PointType;
 	head.value.point_value.x = std::get<0>(value);
 	head.value.point_value.y = std::get<1>(value);
@@ -20,7 +19,6 @@ Expression::Expression(std::tuple<double, double> value) {
 
 Expression::Expression(std::tuple<double, double> start,
 	std::tuple<double, double> end) {
-	// TODO: implement this function
 	Expression p1 = Expression(start);
 	Expression p2 = Expression(end);
 
@@ -33,7 +31,6 @@ Expression::Expression(std::tuple<double, double> start,
 Expression::Expression(std::tuple<double, double> center,
 	std::tuple<double, double> start,
 	double angle) {
-	// TODO: implement this function
 	Expression c1 = Expression(center);
 	Expression p1 = Expression(start);
 
@@ -45,26 +42,22 @@ Expression::Expression(std::tuple<double, double> center,
 
 
 Expression::Expression(bool tf) {
-	// TODO: implement this function
 	head.type = BooleanType;
 	head.value.bool_value = tf;
 }
 
 Expression::Expression(double num) {
-	// TODO: implement this function
 	head.type = NumberType;
 	head.value.num_value = num;
 }
 
 Expression::Expression(const std::string & sym) {
-	// TODO: implement this function
 	head.type = SymbolType;
 	head.value.sym_value = sym;
 }
 
 
 bool Expression:: operator==(const Expression & exp) const noexcept {
-	// TODO: implement this function
 	bool result = (head == exp.head);
 
 	result = result && (tail.size() == exp.tail.size());
@@ -130,8 +123,6 @@ std::ostream & operator <<(std::ostream & out, const Atom & atom)
 
 //format expression output
 std::ostream & operator<<(std::ostream & out, const Expression & exp) {
-	// TODO: implement this function
-
 	if (exp.head.type != NoneType) //check if the head of the expression is not NoneType
 	{
 		out << "(";
@@ -157,11 +148,8 @@ bool is_numeric(std::string token)
 }
 
 //conversion of tokenized object (a string) to an atom type
+//returns true if the token is valid, false otherwise
 bool token_to_atom(const std::string &token, Atom & atom) {
-	// TODO: implement this function
-	// return true if it a token is valid. otherwise, return false.
-	  //a double can be 1.4 or 1 or 1e4
-	  //boolean return flag
 	bool result = true;
 	if (token == "(" || token == ")")
 	{
@@ -361,7 +349,6 @@ Expression Expression::handle_draw(Environment & env, std::vector<Atom> &graphic
 		if ((a.head.value.sym_value == "point" || a.head.value.sym_value == "arc" || a.head.value.sym_value == "line" )&& a.head.type == SymbolType)
 		{
 			exp = a.evaluate(env, graphical);
-			//TODO: convert exp to atom and push it into graphics vector
 			graphical.push_back(exp.head);
 			
 		}
