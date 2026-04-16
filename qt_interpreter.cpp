@@ -15,8 +15,6 @@
 #include "interpreter_semantic_error.hpp"
 
 QtInterpreter::QtInterpreter(QObject * parent): QObject(parent){
-  // TODO: your code here...
-	//I don't have to do anything.
 }
 
 void QtInterpreter::parseAndEvaluate(QString entry){

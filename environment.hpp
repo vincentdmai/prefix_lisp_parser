@@ -24,7 +24,7 @@ public:
 	//uses symbol to obtain the expression and return it
 	Expression get_exp(const Atom & sym) const;
 
-	//bassically adds another symbol, with an expression to the map, if it doesn't already exist
+	//basically adds another symbol, with an expression to the map, if it doesn't already exist
 	void add_exp(const Atom & sym, const Expression & exp);
 
 	//check if procedure type
